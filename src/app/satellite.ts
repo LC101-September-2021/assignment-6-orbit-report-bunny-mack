@@ -1,3 +1,6 @@
+import { htmlAstToRender3Ast } from "@angular/compiler/src/render3/r3_template_transform";
+import { OrbitListComponent } from "./orbit-list/orbit-list.component";
+
 export class Satellite {
 
 	name: string;
@@ -15,7 +18,14 @@ export class Satellite {
    }
 	
 	isSpaceDebris(): boolean {
-		return true;
+		if(this.type === "Space Debris") {
+
+			OrbitListComponent.prototype.changeColor = false;
+			//changeColor
+			return true;
+		} else {
+			return false;
+		}
    }
 
 }
