@@ -12,7 +12,7 @@ export class OrbitListComponent implements OnInit {
   @Input() satellites: Satellite[];
   constructor() { }
 
-  changeColor: boolean = false;
+  changeColor: boolean = true;
 
 
   ngOnInit() {

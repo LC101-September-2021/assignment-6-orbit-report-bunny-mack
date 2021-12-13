@@ -19,9 +19,6 @@ export class Satellite {
 	
 	isSpaceDebris(): boolean {
 		if(this.type === "Space Debris") {
-
-			OrbitListComponent.prototype.changeColor = false;
-			//changeColor
 			return true;
 		} else {
 			return false;

@@ -13,8 +13,8 @@
         <td>{{satellite.name}}</td>
         <!-- *ngIf = "satellite.isSpaceDebris(satellite.type)" [class.warning]=true -->
         
-        <td *ngIf = "satellite.isSpaceDebris(satellite.type)" [class.warning]="!changeColor">{{satellite.type}}</td>
-        <td *ngIf = "!satellite.isSpaceDebris(satellite.type)" [class.warning]="changeColor">{{satellite.type}}</td>
+        <td *ngIf = "satellite.isSpaceDebris(satellite.type)" [class.warning]=changeColor>{{satellite.type}}</td>
+        <td *ngIf = "!satellite.isSpaceDebris(satellite.type)">{{satellite.type}}</td>
         <td>{{satellite.operational}}</td>
         <td>{{satellite.orbitType}}</td>
         <td>{{satellite.launchDate}}</td>
