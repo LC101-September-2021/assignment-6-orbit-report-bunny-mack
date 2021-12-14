@@ -6,13 +6,9 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-
-    <!-- [class.warning]="true" -->
    
     <tr class="data-row" *ngFor="let satellite of satellites">
-        <td>{{satellite.name}}</td>
-        <!-- *ngIf = "satellite.isSpaceDebris(satellite.type)" [class.warning]=true -->
-        
+        <td>{{satellite.name}}</td>        
         <td *ngIf = "satellite.isSpaceDebris(satellite.type)" [class.warning]=changeColor>{{satellite.type}}</td>
         <td *ngIf = "!satellite.isSpaceDebris(satellite.type)">{{satellite.type}}</td>
         <td>{{satellite.operational}}</td>
